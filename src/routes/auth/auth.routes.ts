@@ -1,16 +1,16 @@
-import express from 'express'
-import { login, register, sendRecoveryEmail } from './auth.controllers'
+import express from 'express';
+import { login, register, sendRecoveryEmail } from './auth.controllers';
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/')
+router.get('/');
 
-router.get('/:id')
+router.get('/:id');
 
-router.post('/login', login)
+router.post('/login', login);
 
-router.post('/register', register)
+router.post('/register', register);
 
-router.post('/send-recovery-email', sendRecoveryEmail)
+router.post('/send-recovery-email', sendRecoveryEmail);
 
-export default router
+export default router;

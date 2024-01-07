@@ -1,1 +1,1 @@
-export { default as UsersCollection } from './users.collection'
+export { default as UsersCollection } from './auth.collection';

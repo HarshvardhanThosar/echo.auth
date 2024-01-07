@@ -1,12 +1,10 @@
-import * as z from 'zod'
+import * as z from 'zod';
 
-const Password = z
+export const Password = z
   .string()
   .min(8, 'Invalid password format')
   .describe(
-    '`password`, usually, along with `email` is one of the crucial pair of paramters to authenticate users.'
-  )
+    '`password`, usually, along with `email` is one of the crucial pair of paramters to authenticate users.',
+  );
 
-type Password = z.infer<typeof Password>
-
-export default Password
+export type Password = z.infer<typeof Password>;

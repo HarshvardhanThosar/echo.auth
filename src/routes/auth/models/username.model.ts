@@ -1,10 +1,8 @@
-import * as z from 'zod'
+import * as z from 'zod';
 
-const Username = z
+export const Username = z
   .string()
   .min(8, 'Invalid username format')
-  .describe('`username` can be used as a social identifier by other users.')
+  .describe('`username` can be used as a social identifier by other users.');
 
-type Username = z.infer<typeof Username>
-
-export default Username
+export type Username = z.infer<typeof Username>;

@@ -1,11 +1,12 @@
-import * as z from 'zod'
+import * as z from 'zod';
 
-const Email = z
-  .string()
-  .min(5, 'Invalid email format')
-  .email('Invalid email format')
-  .describe('`email` is one of the crucial unique identifiers for the users.')
+export const Email = z
+  .string({
+    invalid_type_error: 'Please enter a valid email',
+    required_error: 'Email is requried',
+  })
+  .min(5, 'Please enter a valid email')
+  .email('Please enter a valid email')
+  .describe('`email` is one of the crucial unique identifiers for the users.');
 
-type Email = z.infer<typeof Email>
-
-export default Email
+export type Email = z.infer<typeof Email>;

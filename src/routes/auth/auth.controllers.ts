@@ -1,15 +1,21 @@
-import type express from 'express'
+import type express from 'express';
 
-export async function login (req: express.Request, res: express.Response) { }
+export async function login(
+  request: express.Request,
+  response: express.Response,
+): Promise<void> {}
 
-export async function register (req: express.Request, res: express.Response) {
-  console.log(req.body)
-  res.status(200).send({
-    message: 'Server is processing.'
-  })
+export async function register(
+  request: express.Request,
+  response: express.Response,
+): Promise<void> {
+  console.log(request.body);
+  response.status(200).send({
+    message: 'Server is processing.',
+  });
 }
 
-export async function sendRecoveryEmail (
-  req: express.Request,
-  res: express.Response
-) { }
+export async function sendRecoveryEmail(
+  request: express.Request,
+  response: express.Response,
+): Promise<void> {}
